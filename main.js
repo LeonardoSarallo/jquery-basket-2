@@ -33,13 +33,21 @@ for (var i = 0; i < 100; i++)
 
 for (var key in giocatori)
 {
-  var sidebar = giocatori[key];
+  var sidebar = giocatori[key].codiceGiocatoreUnivoco += ('') + '<br>';
+  console.log(sidebar);
+  $('.sidebar').append(sidebar);
+}
+
+for (var i = 0; i < 100; i++) {
+  var playerCodeDiv = $('.template .playercode').clone();
+
+  $('.sidebar').append(playerCodeDiv);
+  console.log(playerCodeDiv);
 
 }
-console.log(sidebar);
 
 
-console.log(giocatori);
+
 function getRandomNumber(min, max)
 {
   var newRandomNumber = Math.floor(Math.random()*(max-min+1)+min);
