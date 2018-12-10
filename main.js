@@ -33,14 +33,14 @@ for (var i = 0; i < 100; i++)
 
 for (var key in giocatori)
 {
-  var sidebar = giocatori[key].codiceGiocatoreUnivoco += ('') + '<br>';
+  var sidebar = giocatori[key].codiceGiocatoreUnivoco += ('');
   console.log(sidebar);
-  $('.sidebar').append(sidebar);
+
 }
 
 for (var i = 0; i < 100; i++) {
   var playerCodeDiv = $('.template .playercode').clone();
-
+  playerCodeDiv.text(sidebar);
   $('.sidebar').append(playerCodeDiv);
   console.log(playerCodeDiv);
 
