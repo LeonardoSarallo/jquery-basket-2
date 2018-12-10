@@ -31,20 +31,29 @@ for (var i = 0; i < 100; i++)
 }
 
 
-for (var key in giocatori)
-{
-  var sidebar = giocatori[key].codiceGiocatoreUnivoco;
-  console.log(sidebar);
 
-}
 
 for (var i = 0; i < giocatori.length; i++) {
   var playerCodeDiv = $('.template .playercode').clone();
+  var sidebar = giocatori[i].codiceGiocatoreUnivoco;
   playerCodeDiv.text(sidebar);
+
   $('.sidebar').append(playerCodeDiv);
   console.log(playerCodeDiv);
 
 }
+
+
+$('.playercode').click(function() {
+
+  var clickCode = $(this).index();
+  console.log(clickCode);
+
+  
+
+
+});
+
 
 
 
